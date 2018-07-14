@@ -1,0 +1,13 @@
+{{perpage}}
+
+<div *ngIf="loading">Carregando...</div>
+
+<div *ngIf="!loading && movies && movies.length == 0">Nenhum filme encontrado.</div>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let movie of movies" class="col-sm">
+      <app-movie-item [movie]="movie"></app-movie-item>
+    </div>
+  </div>
+</div>
